@@ -28,8 +28,6 @@ const init =  () => {
                     var balance2 = document.createTextNode('Balance: '+ balance)
                     p.appendChild(balance2)
                     document.getElementById('display').appendChild(p)
-                    console.log(balance, '44')
-                    console.log(withdrawalAmount,balance, '41')
                     return balance  
                     }                   
                 })    

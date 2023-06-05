@@ -13,6 +13,7 @@ const createSlideshow = function () {
     let nodes = { image: null, caption: null }
     let img = { cache: [], counter: 0 }
     let speed = 2000
+    
 
     const stopSlideShow = function () {
         clearInterval(timer)
@@ -53,7 +54,7 @@ const createSlideshow = function () {
                 nodes.image = arguments[0]
                 nodes.caption = arguments[1]
             }
-            timer = setInterval(displayNextImage, 2000)
+            timer  = setInterval(displayNextImage, speed)
             return this
         },
         createToggleHandler: function () {
@@ -74,14 +75,16 @@ const createSlideshow = function () {
         },
         
         getSpeed: function () {
+            
             btn1.addEventListener('click', () =>{
                 speed = prompt('The current speed is 2000 (2 seconds)\nEnter the speed you desire')
                 return speed
-            })
+            })        
         },
 
-        setSpeed: function () {           
-            timer = setInterval(displayNextImage, speed)        
+        setSpeed: function () {      
+            timer = setInterval(displayNextImage, speed)  
+            return timer      
         }    
     }
 }
