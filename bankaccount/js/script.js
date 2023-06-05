@@ -52,7 +52,7 @@ const init =  () => {
                     var ownerN = document.createTextNode('Name: '+ ownerName)
                     p.appendChild(ownerN)
                     document.getElementById('display').appendChild(p)
-                    })
+                    } )
                     return this
                 } 
             } 
